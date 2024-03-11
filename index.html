@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket Testing</title>
+</head>
+
+<body>
+
+    <h1>Socket Testing</h1>
+
+
+    <!-- <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script> -->
+    <script src="https://socket-testing-89qu.onrender.com/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io.connect('https://socket-testing-89qu.onrender.com/');
+        socket.on('message', function (data) {
+            console.log(data);
+
+        });
+        socket.emit('message', 'test message123.');
+    </script>
+</body>
+
+</html>
