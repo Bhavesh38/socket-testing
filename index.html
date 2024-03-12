@@ -15,12 +15,13 @@
     <!-- <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script> -->
     <script src="https://socket-testing-89qu.onrender.com/socket.io/socket.io.js"></script>
     <script>
-        var socket = io.connect('https://socket-testing-89qu.onrender.com/');
+        var socket = io.connect('https://zau6xled.a2hosted.com', {
+            withCredentials: true
+        });
         socket.on('message', function (data) {
             console.log(data);
-
         });
-        socket.emit('message', 'test message123.');
+        socket.emit('message', 'Hello Bhavesh this side123.');
     </script>
 </body>
 
